@@ -1,6 +1,10 @@
 #!bin/bash
 # I just removed all of the optional selections so this can be used in scripts.
 
+output(){
+    echo -e '\e[36m'$1'\e[0m';
+}
+
 output "IPTables Anti-DDOS Script ${version}"
 output "Copyright © 2019 Thien Tran <contact@thientran.io>."
 output "Please report any issues or copyright violations to https://thientran.io/discord"
