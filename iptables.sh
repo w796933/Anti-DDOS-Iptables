@@ -38,13 +38,9 @@ block_bruteforce(){
     esac    
 }
 
-version=v1.2
-
-#Execution
-
 output "IPTables Anti-DDOS Script ${version}"
 output "Copyright © 2019 Thien Tran <contact@thientran.io>."
-output "Please report any issues or copyright violations to https://thientran.io/discord"
+output "Support: https://thientran.io/discord"
 output ""
 
 if [ -r /etc/os-release ]; then
