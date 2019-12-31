@@ -1,7 +1,4 @@
 # I just removed all of the optional selections so this can be used in scripts.
-version=v1.2
-
-#Execution
 
 output "IPTables Anti-DDOS Script ${version}"
 output "Copyright © 2019 Thien Tran <contact@thientran.io>."
