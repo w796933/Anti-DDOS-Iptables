@@ -1,3 +1,4 @@
+#!bin/bash
 # I just removed all of the optional selections so this can be used in scripts.
 
 output "IPTables Anti-DDOS Script ${version}"
