@@ -43,8 +43,8 @@ version=v1.2
 #Execution
 
 output "IPTables Anti-DDOS Script ${version}"
-output "Copyright © 2019 Thien Tran <thientran@securesrv.io>."
-output "Please report any issues or copyright violations to https://securesrv.io/discord"
+output "Copyright © 2019 Thien Tran <contact@thientran.io>."
+output "Please report any issues or copyright violations to https://thientran.io/discord"
 output ""
 
 if [ -r /etc/os-release ]; then
