@@ -94,3 +94,5 @@ EOF
             javapipe_kernel
     esac    
 }
+
+javapipe_kernel
