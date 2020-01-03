@@ -127,7 +127,7 @@ EOF
     esac    
 }
 
-output "IPTables Anti-DDOS Script ${version}"
+output "IPTables Anti-DDOS Script"
 output "Copyright © 2019 Thien Tran <contact@thientran.io>."
 output "Support: https://thientran.io/discord"
 output ""
