@@ -140,7 +140,7 @@ output "Installing IPTables"
 
 if [ "$lsb_dist" =  "ubuntu" ] || [ "$lsb_dist" =  "debian" ]; then
      apt -y install iptables
-elif [ "$lsb_dist" =  "fedora" ] || [ "$lsb_dist" =  "rhel" ] || [ "$lsb_dist" =  "centos" ]; then
+elif [ "$lsb_dist" =  "fedora" ] || [ "$lsb_dist" =  "rhel" ] || [ "$lsb_dist" =  "centos" ] || [ "$lsb_dist" =  "cloudlinux" ]; then
      yum -y install iptables
 else 
      output "Unsupported distribution. This script only supports Fedora, RHEL, CentOS, Ubuntu, and Debian."
