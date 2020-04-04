@@ -1,18 +1,7 @@
 #!/bin/bash
 
 #Just the JavaPipe kernel section of the main script. 
-
-output(){
-    echo -e '\e[36m'$1'\e[0m';
-}
-
-javapipe_kernel(){
-    output "Apply JavaPipe's kernel configurations? (https://javapipe.com/blog/iptables-ddos-protection/)"
-    output "[1] Yes. (Recommended for CentOS 8/7)"
-    output "[2] No."
-    read javapipe
-    case $javapipe in
-        1)  bash -c 'cat > /etc/sysctl.conf' <<-'EOF'
+bash -c 'cat > /etc/sysctl.conf' <<-'EOF'
 kernel.printk = 4 4 1 7 
 kernel.panic = 10 
 kernel.sysrq = 0 
@@ -86,13 +75,5 @@ net.ipv4.conf.all.send_redirects = 0
 net.ipv4.conf.all.accept_source_route = 0 
 net.ipv4.conf.all.rp_filter = 1
 EOF
-            sysctl -p 
-            ;;
-        2)  output "Javapipe kernel modifications not applied."
-            ;;
-        * ) output "You did not enter a valid selection."
-            javapipe_kernel
-    esac    
-}
 
-javapipe_kernel
+sysctl -p 
