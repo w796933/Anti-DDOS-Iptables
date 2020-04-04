@@ -5,8 +5,6 @@ if [ -r /etc/os-release ]; then
     lsb_dist="$(. /etc/os-release && echo "$ID")"
 fi
 
-output "Installing IPTables"
-
 if [ "$lsb_dist" =  "ubuntu" ] || [ "$lsb_dist" =  "debian" ]; then
      apt -y install iptables
 elif [ "$lsb_dist" =  "fedora" ] || [ "$lsb_dist" =  "rhel" ] || [ "$lsb_dist" =  "centos" ] || [ "$lsb_dist" =  "cloudlinux" ]; then
