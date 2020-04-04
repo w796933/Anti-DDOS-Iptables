@@ -1,15 +1,6 @@
 #!bin/bash
 # I just removed all of the optional selections so this can be used in scripts.
 
-output(){
-    echo -e '\e[36m'$1'\e[0m';
-}
-
-output "IPTables Anti-DDOS Script ${version}"
-output "Copyright © 2019 Thien Tran <contact@thientran.io>."
-output "Please report any issues or copyright violations to https://thientran.io/discord"
-output ""
-
 if [ -r /etc/os-release ]; then
     lsb_dist="$(. /etc/os-release && echo "$ID")"
 fi
@@ -65,5 +56,3 @@ fi
 (crontab -l ; echo "@reboot /sbin/iptables -N port-scanning >> /dev/null 2>&1")| crontab - 
 (crontab -l ; echo "@reboot /sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN >> /dev/null 2>&1")| crontab - 
 (crontab -l ; echo "@reboot /sbin/iptables -A port-scanning -j DROP >> /dev/null 2>&1")| crontab - 
-
-output "Iptables rules applied."
